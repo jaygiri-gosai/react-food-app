@@ -39,7 +39,9 @@ body {
   gap: 38%;
 }
 .search-container {
-  padding-top: 30px;
+  /* padding-top: 30px; */
+  text-align: center;
+  padding-bottom: 30px;
 }
 .restaurant-list {
   display: flex;
@@ -51,8 +53,16 @@ body {
   border: 1px solid black;
   width: 250px;
   padding: 10px;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 .card > img {
   width: 100%;
+}
+.shimmer-card {
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  margin: 20px;
+  border: 1px solid black;
+  padding: 10px;
 }
