@@ -48,7 +48,13 @@ body {
   flex-wrap: wrap;
   gap: 50px;
 }
-
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
 .card {
   border: 1px solid black;
   width: 250px;
@@ -58,6 +64,9 @@ body {
 .card > img {
   width: 100%;
 }
+.cart-element {
+  padding-right: 5px;
+}
 .shimmer-card {
   width: 200px;
   height: 200px;
@@ -65,4 +74,9 @@ body {
   margin: 20px;
   border: 1px solid black;
   padding: 10px;
+}
+.restaurant {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
 }
