@@ -6,3 +6,15 @@ export const DETAIL_API =
 
 export const IMG_URL =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+
+export const ADDRESS_DATA = [
+  "6950 S. Jordan Road Centennial, CO 80112",
+  "6775 Sherman Street, Loveland, CO 80538",
+  "4474 Barnes Road Colorado Springs, CO 80917",
+];
+
+export const PHONE_DATA = [
+  "877.WEIFIELD phone",
+  "877.WEIFIELD",
+  "877.WEIFIELD phone",
+];

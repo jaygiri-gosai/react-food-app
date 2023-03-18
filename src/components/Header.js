@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import isOnline from "../utils/isOnline";
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -24,6 +25,7 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
+        <span>{isOnline() ? "Online" : "Offline"}</span>
       </div>
 
       <div className="cart">

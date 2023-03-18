@@ -80,3 +80,7 @@ a:visited {
   margin: 5px;
   padding: 5px;
 }
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+}
