@@ -27,12 +27,13 @@ const Body = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="">
       {restaurantData?.length <= 0 ? (
         <Shimmer />
       ) : (
-        <div className="search-container">
+        <div className="text-center m-auto w-[50%]">
           <input
+            className="border-solid border-2 border-gray-dark mx-2 rounded-md"
             type="text"
             name="searchText"
             value={searchText}
