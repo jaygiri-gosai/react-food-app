@@ -5,18 +5,26 @@ import Shimmer from "./Shimmer";
 
 const Restaurant = () => {
   let { rid } = useParams();
-  const [restaurantMenu, setRestaurantMenu] = useState([]);
-
+  const [restaurantMenu, setRestaurantMenu] = useState(Object);
+  const [apiStatus, setAPIStatus] = useState(0);
   const getRestaurantDetail = async () => {
     const data = await fetch(DETAIL_API + rid);
     const json = await data.json();
-    Object.keys(json).length > 0
-      ? setRestaurantMenu(json?.data)
-      : setRestaurantMenu([]);
+
+    if (Object.keys(json).length > 0 && json?.statusCode == 0) {
+      setRestaurantMenu(json?.data);
+      setAPIStatus(0);
+    } else {
+      setRestaurantMenu(Object);
+      setAPIStatus(1);
+    }
   };
+
   useEffect(() => {
     getRestaurantDetail();
   }, []);
+
+  if (apiStatus == 1) return <h1>Restaurant not found!</h1>;
 
   return Object.keys(restaurantMenu).length <= 0 ? (
     <Shimmer />
