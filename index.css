@@ -1,4 +1,8 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*body {
   margin: 5px;
   padding: 5px;
 }
@@ -40,7 +44,7 @@ body {
 }
 .search-container {
   /* padding-top: 30px; */
-  text-align: center;
+/* text-align: center;
   padding-bottom: 30px;
 }
 .restaurant-list {
@@ -59,9 +63,9 @@ a:visited {
   border: 1px solid black;
   width: 250px;
   padding: 10px;
-  /* flex-grow: 1; */
+  /* flex-grow: 1; 
 }
-.card > img {
+/*.card > img {
   width: 100%;
 }
 .cart-element {
@@ -83,4 +87,4 @@ a:visited {
 .contact-container {
   display: flex;
   justify-content: space-between;
-}
+}*/
