@@ -24,7 +24,8 @@ const Restaurant = () => {
     getRestaurantDetail();
   }, []);
 
-  if (apiStatus == 1) return <h1>Restaurant not found!</h1>;
+  if (apiStatus == 1)
+    return <h1>Failed to load restaurant data! Please try after sometime.</h1>;
 
   return Object.keys(restaurantMenu).length <= 0 ? (
     <Shimmer />

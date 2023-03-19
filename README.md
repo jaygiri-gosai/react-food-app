@@ -20,3 +20,5 @@ Tasks included
 - [:heavy_check_mark:] Made a Login Logout button which toggles with a state
 - [:heavy_check_mark:] Created a Restaurant page with dynamicrestaurant ID
   - [:heavy_check_mark:] Made a live API call to get the restaurant menu
+- [:heavy_check_mark:] Integrated Tailwind css with Postcss and updated the design
+- [:heavy_check_mark:] React Context and lifting the state up

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -6,14 +6,21 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import RouteError from "./components/RouteError";
 import Shimmer from "./components/Shimmer";
 import Restaurant from "./components/Restaurant";
+import UserContext from "./utils/UserContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "Jay",
+    email: "jaygiri.gosai@yahoo.com",
+  });
   return (
     <>
-      <Header />
-      <Outlet />
+      <UserContext.Provider value={{ user: user, setUser: setUser }}>
+        <Header />
+        <Outlet />
+      </UserContext.Provider>
     </>
   );
 };
